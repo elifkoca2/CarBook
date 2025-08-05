@@ -10,5 +10,6 @@ namespace CarBook.Application.İnterfaces.Carİnterfaces
     public interface ICarRepository
     {
         List<Car> GetCarListWithBrands();
+        List<Car> GetLast5CarsWithBrands();
     }
 }
