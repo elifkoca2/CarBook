@@ -1,6 +1,8 @@
 ﻿using CarBook.Application.Features.CQRS.Commands.CarCommands;
 using CarBook.Application.Features.CQRS.Handlers.CarHandlers;
 using CarBook.Application.Features.CQRS.Queries.CarQueries;
+using CarBook.Application.Features.Mediator.Queries.StatisticsQueries;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +19,7 @@ namespace CarBook.WebApi.Controllers
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
         private readonly GetLast5CarsWithBrandQueryHandler _getLast5CarsWithBrandQueryHandler;
+       
 		public CarsController(CreateCarCommandHandler createCommandHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarsWithBrandQueryHandler getLast5CarsWithBrandQueryHandler)
 		{
 			_createCommandHandler = createCommandHandler;
@@ -49,7 +52,7 @@ namespace CarBook.WebApi.Controllers
             return Ok("Araba Bilgisi Eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveCar(int id)
         {
             await _removeCarCommandHandler.Handle(new RemoveCarCommand(id));
@@ -77,5 +80,6 @@ namespace CarBook.WebApi.Controllers
             return Ok(values);
         }
 
-	}
+       
+    }
 }
