@@ -1,0 +1,17 @@
+﻿@model List<ResultCarFeatureByCarIdDto>
+
+<div class="tab-pane fade show active" id="pills-description">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6 mb-2">
+                <ul class="features">
+                    <li class="@(item.Available ? "check" : "remove")">
+                        <span class="@(item.Available ? "ion-ios-checkmark text-success" : "ion-ios-close text-danger")"></span>
+                        @item.FeatureName
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>
