@@ -1,12 +1,6 @@
 # 🚗 CarBook - Araç Kiralama Sistemi
 
-Bu proje, ASP.NET Core 8.0 kullanılarak geliştirilmiş, modern yazılım mimarileri ve tasarım desenlerini içeren bir araç kiralama sistemidir. Proje, gerçek dünya senaryosu üzerinden geliştirilmiş olup sürdürülebilir, ölçeklenebilir ve temiz kod prensiplerine uygun şekilde tasarlanmıştır.
-
----
-
-## 🎯 Proje Amacı
-
-CarBook, kullanıcıların araçları listeleyebileceği, fiyatları inceleyebileceği ve kiralama süreçlerini yönetebileceği bir platform sunar. Projede modern backend yaklaşımları uygulanarak kurumsal düzeyde bir yapı oluşturulmuştur.
+CarBook, kullanıcıların araçları listeleyebileceği, fiyatları inceleyebileceği ve kiralama süreçlerini yönetebileceği bir projedir. Projede modern backend yaklaşımları uygulanarak kurumsal düzeyde bir yapı oluşturulmuştur.
 
 ---
 
@@ -37,17 +31,66 @@ CarBook, kullanıcıların araçları listeleyebileceği, fiyatları inceleyebil
 - **Infrastructure** → Veritabanı ve dış servisler
 - **Presentation** → API ve UI katmanı
 
-## 🚀 Proje Özellikleri
+---
+## ✨ Temel Özellikler
 
-- Araç listeleme ve detay görüntüleme
-- Araç kiralama fiyat yönetimi
-- Blog sistemi ve detay sayfaları
-- İletişim sayfası
-- API tabanlı veri yönetimi
-- Gerçek zamanlı veri güncellemeleri (SignalR)
+### 🎯 Kullanıcı Deneyimi
+
+- 🚗 **Gelişmiş Araç Listeleme**  
+  Kullanıcılar; marka, yakıt tipi, şanzıman ve fiyat gibi kriterlere göre araçları filtreleyebilir.
+
+- 📍 **Lokasyon Bazlı Araç Bulma**  
+  Seçilen lokasyona göre müsait araçlar dinamik olarak listelenir.
+
+- 📅 **Kolay Rezervasyon Süreci**  
+  Kullanıcı dostu form ile hızlı ve pratik rezervasyon oluşturma imkanı.
+
+- 💰 **Esnek Fiyatlandırma Görüntüleme**  
+  Günlük, haftalık ve aylık kiralama seçeneklerini karşılaştırmalı olarak inceleme.
+
+- ⭐ **Yorum ve Değerlendirme Sistemi**  
+  Kullanıcılar araçlar hakkında deneyimlerini paylaşabilir.
+
+- 📝 **Blog ve İçerik Yönetimi**  
+  Kullanıcılar güncel blog yazılarını okuyabilir ve içeriklere erişebilir.
+
 
 ---
 
+### 🛡️ Yönetim Paneli (Admin)
+
+- 📊 **Gerçek Zamanlı Dashboard**  
+  SignalR kullanılarak anlık veri akışı ve canlı istatistik takibi.
+
+- 🚙 **Araç Yönetimi (CRUD)**  
+  Araç ekleme, güncelleme, silme ve detaylı yönetim işlemleri.
+
+- ✨ **Dinamik Özellik Atama**  
+  Araçlara checkbox yapısı ile özellik ekleme/çıkarma (Many-to-Many yönetimi).
+
+- 🏷️ **Marka ve Kategori Yönetimi**  
+  Araç markalarını ve içerik kategorilerini merkezi panelden yönetme.
+
+- 💰 **Fiyatlandırma Yönetimi**  
+  Araçlar için dönemsel fiyat tanımlama (günlük, haftalık, aylık).
+
+- 📍 **Lokasyon Yönetimi**  
+  Şube bazlı araç ve rezervasyon yönetimi.
+
+- 📋 **Rezervasyon Takibi**  
+  Tüm rezervasyonları görüntüleme ve yönetme.
+
+- ✍️ **Blog & İçerik Yönetimi**  
+  Blog, kategori, yazar ve yorumların yönetimi.
+
+- 💬 **Yorum Moderasyonu**  
+  Kullanıcı yorumlarını onaylama ve kontrol etme.
+
+- 🎨 **Dinamik İçerik Yönetimi**  
+  Banner, hizmetler, hakkımızda ve footer alanlarını güncelleme.
+
+- 📈 **Gelişmiş İstatistikler ve Raporlama**  
+  Araç, fiyat ve kullanıcı verileri üzerinden analiz ve raporlama.
 
 ## 📷 Proje Görselleri
 
@@ -58,6 +101,8 @@ CarBook, kullanıcıların araçları listeleyebileceği, fiyatları inceleyebil
 ### 🚘 Araçlar Sayfası
 <img width="1626" height="922" alt="ARABALAR" src="https://github.com/user-attachments/assets/9c43f22c-0008-4aa0-865b-d831842c8b64" />
 
+### 🚘 Araç Detay Sayfası
+<img width="1230" height="931" alt="arabadetail" src="https://github.com/user-attachments/assets/8c940a22-840a-4fd8-937b-bff608bf98ec" />
 
 ### 💰 Araç Kiralama Fiyatları
 <img width="1776" height="912" alt="fiyat" src="https://github.com/user-attachments/assets/a3ca4864-38f9-4478-a8e5-dda947da35ec" />
@@ -69,6 +114,18 @@ CarBook, kullanıcıların araçları listeleyebileceği, fiyatları inceleyebil
 
 ### 📞 İletişim Sayfası
 <img width="1751" height="870" alt="iletisim" src="https://github.com/user-attachments/assets/eb742349-057f-4398-a81e-63cf34a6aeff" />
+
+## 🛡️ Admin Paneli
+
+### 📊 Dashboard (Gerçek Zamanlı)
+<img width="1892" height="926" alt="AdminDashboard" src="https://github.com/user-attachments/assets/431ee99f-5c84-4935-97a7-36be16693d00" />
+
+### 📈 İstatistikler Sayfası
+<img width="1887" height="920" alt="İstatistikler" src="https://github.com/user-attachments/assets/4d6bd8e1-a764-45f7-b2cb-4848bd1c8544" />
+
+### 🚗 Araç Yönetimi
+<img width="1883" height="892" alt="Arabaişlemleri" src="https://github.com/user-attachments/assets/75b2381a-4e6f-42fa-a475-f645908d8cb0" />
+
 
 ### 🔗 API Yapısı
 <img width="1436" height="928" alt="API" src="https://github.com/user-attachments/assets/54678260-8072-4a0e-a6c8-e34632d498cf" />
